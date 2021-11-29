@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "items": [
+            {
+                    "id": 23551,
+                    "full_name": "Gresskar Butternut Portugal/ Spania, 750 g",
+                    "name": "Gresskar Butternut",
+                    "name_extra": "Portugal/ Spania, 750 g",
+                    "gross_price": 33.00,
+                    "gross_unit_price": "44.00"
+                    },
+            {
+                    "id": 15163,
+                    "full_name": "Koriander Gourmet Frisk i Pose, Etiopia, 20 g",
+                    "name": "Koriander Gourmet",
+                    "name_extra": "Frisk i Pose, Etiopia, 20 g",
+                    "gross_price": 27.60,
+                    "gross_unit_price": "1380.00"
+            },
+            {
+                    "id": 27243,
+                    "full_name": "FreshFlowers Tulipaner Mix 15 stk",
+                    "name": "Tulipaner Mix",
+                    "name_extra": "15 stk",
+                    "gross_price": 129.00,
+                    "gross_unit_price": "8.60"
+                },
+            {
+                    "id": 11917,
+                    "full_name": "Brødverket Gourmet Grovbrød Oppskåret, 670 g",
+                    "name": "Gourmet Grovbrød",
+                    "name_extra": "Oppskåret, 670 g",
+                    "gross_price": 33.57,
+                    "gross_unit_price": "50.10"
+                   
+            },
+            {
+                    "id": 29984,
+                    "full_name": "Ricotta Ambrosi, 250 g",
+                    "name": "Ricotta",
+                    "name_extra": "Ambrosi, 250 g",
+                    "gross_price": 24.90,
+                    "gross_unit_price": "99.60"
+            },
+            {
+                    "id": 18223,
+                    "full_name": "REMA 1000 Fullkornsris Boil-in-bag 8x125g, 1 kg",
+                    "name": "Fullkornsris",
+                    "name_extra": "Boil-in-bag 8x125g, 1 kg",
+                    "gross_price": 35.60,
+                    "gross_unit_price": "35.60"
+            },
+            {
+                    "id": 18925,
+                    "full_name": "Patak's Mild Curry Paste 165 g",
+                    "name": "Mild Curry Paste",
+                    "name_extra": "165 g",
+                    "gross_price": 33.70,
+                    "gross_unit_price": "204.24"
+            },
+            {
+                    "id": 29606,
+                    "full_name": "Kokosmelk Vår beste pris, 400 ml",
+                    "name": "Kokosmelk",
+                    "name_extra": "Vår beste pris, 400 ml",
+                    "gross_price": 13.90,
+                    "gross_unit_price": "34.75"
+            }
+        ]
+    }
+]

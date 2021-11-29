@@ -8,10 +8,13 @@
 import SwiftUI
 
 @main
+
 struct TemaOppgaveOdaSwiftUIApp: App {
+    var order = OrderViewmodel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppView().environmentObject(order)
         }
     }
 }
