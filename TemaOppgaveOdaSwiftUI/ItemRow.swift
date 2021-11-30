@@ -8,25 +8,20 @@
 import SwiftUI
 
 struct ItemRow: View {
-    //Farge på alergener, ikke relevant
-    
-    //static let colors: [String: Color] = ["D": . purple, "G": .black, "N": .red, "S": .blue, "V": .green]
-    
-    //Farge på alergener, ikke relevant
     
     @EnvironmentObject var order: OrderViewmodel
-    var item: Product
-    
+    var item: Item
+    var cartChange: CartChange
     var body: some View {
         
         HStack{
     
-        NavigationLink(destination: ItemDetail(item: item)){
+            NavigationLink(destination: ItemDetail(item: item.product)){
         
         //Få bilde og få det til å legge seg til høyre for item name og price
             
         HStack{
-            Image(item.thumbnailImage)
+            Image(item.product.thumbnailImage)
                 .resizable()
                     .frame(width: 32.0, height: 32.0)
                 .clipShape(Circle())
@@ -35,39 +30,32 @@ struct ItemRow: View {
         //Få bilde og få det til å legge seg til høyre for item name og price
             
             VStack(alignment: .leading) {
-            Text(item.name)
+                Text(item.product.name)
                     .font(.headline)
-                Text("\(item.gross_price) kr")
+                Text("\(item.product.gross_price) kr")
             }.layoutPriority(1) //Denne gjør at ingen items i lista kuttes eks: "Gresskar" blir "Gresska...", dersom det ikke skjer trengs den ikke
             //Her legger vi kun på allergener i listeraden, ikke relevant
             Spacer()
             
-    
-            
-            //Her legger vi kun på allergener i listeraden, ikke relevant
-            
-//            ForEach (item.restrictions, id: \.self) { restriction in
-//                Text(restriction)
-//                    .font(.caption)
-//                    .fontWeight(.black)
-//                    .padding(5)
-//                    .background(Self.colors[restriction, default: .black])
-//                    .clipShape(Circle())
-//                    .foregroundColor(.white)
-//            }
-            //Her legger vi kun på allergener i listeraden, ikke relevant
         }
         }
             HStack{
+                
+                if (item.quantity > 1){
+                
             Button(action: {
 //                self.order.remove(item: self.item)
+                cartChange.cartChange(item: item, quantity: -1)
             }) {
                 Image("minus-circle-fill")
                     .foregroundColor(Color("oda-orange"))
             }
+                    Text("\(item.quantity-1)")
+                }
             
             Button(action: {
 //                self.order.add(item: self.item)
+                cartChange.cartChange(item: item, quantity: +1)
             }) {
                 Image("plus-circle-fill")
                     .foregroundColor(Color("oda-orange"))
@@ -81,10 +69,16 @@ struct ItemRow: View {
     
 }
 
-struct ItemRow_Previews: PreviewProvider {
+struct ItemRow_Previews: PreviewProvider, CartChange {
     static let order = OrderViewmodel()
     
+    func cartChange (item: Item, quantity: Int){
+        
+    
+        
+    }
+    
     static var previews: some View {
-        ItemRow(item: Product.example)
+        ItemRow(item: Product.example, cartChange: self as! CartChange)
     }
 }

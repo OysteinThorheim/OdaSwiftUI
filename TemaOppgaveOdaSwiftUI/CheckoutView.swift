@@ -39,18 +39,18 @@ struct CheckoutView: View {
                 }
             }
             
-//            Section(header:
-//                        Text("Total\(totalPrice, specifier: "%.2f")Kr")
-//                        .font(.largeTitle)
-//            ){
-//                Button("Betal"){
-//                    self.showingPaymentAlert.toggle()
-//                }
-//            }
-//        }
-//        .navigationBarTitle(Text("Betaling"), displayMode: .inline)
-//        .alert(isPresented: $showingPaymentAlert) {
-//            Alert (title: Text("Takk for bestillingen"), message:  Text("Totalen på bestillingen: $\(totalPrice, specifier: "%.2f") "), dismissButton: .default(Text("OK")))
+            Section(header:
+                        Text(String(format: "%.2f kr", order.total))
+                        .font(.largeTitle)
+            ){
+                Button("Betal"){
+                    self.showingPaymentAlert.toggle()
+                }
+            }
+        }
+        .navigationBarTitle(Text("Betaling"), displayMode: .inline)
+        .alert(isPresented: $showingPaymentAlert) {
+            Alert (title: Text("Takk for bestillingen"), message:  Text("Totalen på bestillingen: $\(order.total, specifier: "%.2f") "), dismissButton: .default(Text("OK")))
         }
     }
 }

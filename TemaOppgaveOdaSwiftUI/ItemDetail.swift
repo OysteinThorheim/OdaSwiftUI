@@ -19,7 +19,7 @@ struct ItemDetail: View {
             ZStack(alignment:
                         .bottomTrailing){
             Image(item.mainImage)
-//                Text("Photo: \(item.photoCredit)")
+//                Text("Photo: \(item.name)")
 //                    .padding(4)
 //                    .background(Color.black)
 //                    .font(.caption)
@@ -29,7 +29,7 @@ struct ItemDetail: View {
             //ZStacken er for å legge tekst oppå bilde, trengs nok ikke
             
             
-            Text(item.full_name) //Kan byttes med full name??
+            Text(item.full_name) 
                 .padding()
             
             Button ("Legg i handlevognen"){
@@ -42,13 +42,13 @@ struct ItemDetail: View {
     }
 }
 
-struct ItemDetail_Previews: PreviewProvider {
-    
-    static let order = OrderViewmodel()
-    
-    static var previews: some View {
-        NavigationView{
-            ItemDetail(item: Product.example).environmentObject(order)
-        }
-    }
-}
+//struct ItemDetail_Previews: PreviewProvider {
+//    
+//    static let order = OrderViewmodel()
+//    
+//    static var previews: some View {
+//        NavigationView{
+//            ItemDetail(item: Product.example).environmentObject(order)
+//        }
+//    }
+//}

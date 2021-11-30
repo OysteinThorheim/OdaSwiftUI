@@ -28,17 +28,47 @@ class OrderViewmodel: ObservableObject {
 //        }
 //    }
 //
-//    func add(item: Item, quantity: Int) {
-//       // items.append(item)
-//        
-//        item.addQuantity(amount: quantity)
-//    }
-//
-//    func remove(item: Item) {
-//        if let index = items.firstIndex(of: item) {
-//            items.remove(at: index)
-//        }
-//    }
+    func add(index:Int) {
+       // items.append(item)
+
+        //item.addQuantity(amount: quantity)
+        
+        objectWillChange.send()
+        self.items?[index].addQuantity(amount: 1)
+        updateCart()
+    }
+
+    func remove(index: Int) {
+        if(self.items![index].quantity > 1){
+            objectWillChange.send()
+            self.items?[index].addQuantity(amount: -1)
+            updateCart()
+        }
+    }
+    
+    func updateCart(){
+        
+        var cartSize: Int = 0
+        var price: Double = 0.00
+        
+        guard let cart = self.items else {
+            return
+        }
+        
+        for item in cart {
+            
+            if (item.quantity > 1) {
+                cartSize += (item.quantity-1)
+                price += (Double(item.product.gross_price)!) * (Double(item.quantity - 1))
+            }
+            
+        }
+        objectWillChange.send()
+        self.cartSize = cartSize
+        self.total = price
+        print(total)
+        
+    }
     
     
     
@@ -60,7 +90,7 @@ class OrderViewmodel: ObservableObject {
     
     
     
-    private func getItems(result: Result<Items?, Error>){
+    private func getItems(result: Result<GroceryItems?, Error>){
         switch result {
         case .success(let items):
             DispatchQueue.main.async {

@@ -36,7 +36,7 @@ enum CustomFailures: Error {
 
 struct Dataservice{
 
-func fetchItems(urlString:URL, completion: @escaping (Result<Items?, Error>) -> Void){
+func fetchItems(urlString:URL, completion: @escaping (Result<GroceryItems?, Error>) -> Void){
     URLSession(configuration: .default).dataTask(with: urlString){ data, response, error in
       if let error = error {
         completion(.failure(error))
@@ -50,10 +50,10 @@ func fetchItems(urlString:URL, completion: @escaping (Result<Items?, Error>) -> 
       }
     }.resume()
   }
-  func parseJson(jsonData:Data) -> Items?{
+  func parseJson(jsonData:Data) -> GroceryItems?{
     do {
       let decoder = JSONDecoder()
-      let items = try decoder.decode(Items.self, from: jsonData)
+      let items = try decoder.decode(GroceryItems.self, from: jsonData)
       print(items.items.count)
       return items
     } catch {

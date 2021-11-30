@@ -16,7 +16,10 @@ struct AppView: View {
 //        return total
 //    }
     
+    
+    
    // @State private var itemsInCart = false
+    //dette er begynnelsen på å forsøkje å gjøre at nav-bar kun er synelig når det er items in cart, haha
     
     var body: some View {
         TabView{
@@ -29,16 +32,17 @@ struct AppView: View {
             OrderView()
                 .tabItem{
                     Image(systemName: "cart")
-                 //   Text("Total \(totalPrice, specifier: "%.2f")Kr")
+                    Text(String(format: "%.2f kr", order.total))
+//                    Text("Total \(order.total, specifier: "%.2f")Kr")
                 }
         }
     }
 }
 
-struct AppView_Previews: PreviewProvider {
-    static let order = OrderViewmodel()
-    
-    static var previews: some View {
-        AppView().environmentObject(order)
-    }
-}
+//struct AppView_Previews: PreviewProvider {
+//    static let order = OrderViewmodel()
+//    
+//    static var previews: some View {
+//        AppView().environmentObject(order)
+//    }
+//}

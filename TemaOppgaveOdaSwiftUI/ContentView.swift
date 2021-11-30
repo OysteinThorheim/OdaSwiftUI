@@ -7,22 +7,46 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView: View, CartChange {
     
-    @ObservedObject var order = OrderViewmodel()
+    @EnvironmentObject var order: OrderViewmodel
+    
+    func cartChange (item: Item, quantity: Int){
+        
+        if let index = getIndex(item: item){
+            if  quantity > 0 {
+                order.add(index: index)
+            } else {
+                order.remove(index: index)
+            }
+        }
+        
+    }
+    
+    func getIndex(item: Item) -> Int?{
+    
+        if order.items != nil{
+            
+            for i in 0 ..< Int(order.items!.count){
+                if(order.items![i].product.id == item.product.id){
+                    return i
+                }
+            }
+        }
+        return nil
+    }
     
    // let menu = Bundle.main.decode([Items].self, from: "products.json")
     
     var body: some View {
         NavigationView{
         List {
-            //Section name (breakfast etc)
+            
             ForEach(order.items ?? [], id: \.self.product.id) { section in
-               // Section(header: Text(section.name)){
-                //Section name (breakfast etc)
+                
                     
                 
-                ItemRow(item: section.product)
+                ItemRow(item: section, cartChange: self)
 //                  ForEach(section.items){ item in
 //                      ItemRow(item: item)
                     

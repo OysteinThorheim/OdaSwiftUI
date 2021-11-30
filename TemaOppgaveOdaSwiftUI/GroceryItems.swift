@@ -34,7 +34,7 @@
 //#endif
 //}
 
-struct Items: Codable{
+struct GroceryItems: Codable{
     let items: [Item]
     
     enum CodingKeys: String, CodingKey {
@@ -85,7 +85,7 @@ struct Product: Codable, Equatable {
     
     
 #if DEBUG
-    static let example = Product(id: Int(), full_name: "Gresskar Butternut Portugal/ Spania, 750 g",name:"Gresskar Butternut", name_extra: "Portugal/ Spania, 750 g",gross_price: "33.00",gross_unit_price: "44.00")
+    static let example = Item(product: Product (id: Int(), full_name: "Gresskar Butternut Portugal/ Spania, 750 g",name:"Gresskar Butternut", name_extra: "Portugal/ Spania, 750 g",gross_price: "33.00",gross_unit_price: "44.00"),quantity: 1)
 #endif
     
 }
