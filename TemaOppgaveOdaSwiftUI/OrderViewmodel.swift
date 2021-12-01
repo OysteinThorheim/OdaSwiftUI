@@ -33,14 +33,14 @@ class OrderViewmodel: ObservableObject {
 
         //item.addQuantity(amount: quantity)
         
-        objectWillChange.send()
+//        objectWillChange.send()
         self.items?[index].addQuantity(amount: 1)
         updateCart()
     }
 
     func remove(index: Int) {
         if(self.items![index].quantity > 1){
-            objectWillChange.send()
+//            objectWillChange.send()
             self.items?[index].addQuantity(amount: -1)
             updateCart()
         }
@@ -63,7 +63,7 @@ class OrderViewmodel: ObservableObject {
             }
             
         }
-        objectWillChange.send()
+//        objectWillChange.send()
         self.cartSize = cartSize
         self.total = price
         print(total)
