@@ -25,15 +25,19 @@ struct AppView: View {
         TabView{
             ContentView()
                 .tabItem{
+                    if (order.total > 1){
                     Image(systemName: "list.dash")
                     Text("Menu")
+                    }
                 }
             
             OrderView()
                 .tabItem{
+                    if (order.total > 1){
                     Image(systemName: "cart")
                     Text(String(format: "%.2f kr", order.total))
 //                    Text("Total \(order.total, specifier: "%.2f")Kr")
+                    }
                 }
         }
     }

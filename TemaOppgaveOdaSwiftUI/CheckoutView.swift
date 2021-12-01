@@ -16,6 +16,8 @@ struct CheckoutView: View {
     @State private var cuponcode = ""
     @State private var showingPaymentAlert = false
     
+    
+    //Rabattkode?
 //    var totalPrice: Double {
 //        let total = Double(order.total)
 //        return total
@@ -38,6 +40,8 @@ struct CheckoutView: View {
                 TextField("Tast inn rabattkode", text: $cuponcode)
                 }
             }
+            
+            
             
             Section(header:
                         Text(String(format: "%.2f kr", order.total))

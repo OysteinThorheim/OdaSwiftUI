@@ -21,11 +21,13 @@ struct ItemRow: View {
         //Få bilde og få det til å legge seg til høyre for item name og price
             
         HStack{
-            Image(item.product.thumbnailImage)
+            Image(uiImage: item.product.images[0].thumbnail.url.getImageFromUrl())
                 .resizable()
+                .scaledToFit()
                     .frame(width: 32.0, height: 32.0)
                 .clipShape(Circle())
                 .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+            
             
         //Få bilde og få det til å legge seg til høyre for item name og price
             
@@ -69,16 +71,16 @@ struct ItemRow: View {
     
 }
 
-struct ItemRow_Previews: PreviewProvider, CartChange {
-    static let order = OrderViewmodel()
-    
-    func cartChange (item: Item, quantity: Int){
-        
-    
-        
-    }
-    
-    static var previews: some View {
-        ItemRow(item: Product.example, cartChange: self as! CartChange)
-    }
-}
+//struct ItemRow_Previews: PreviewProvider, CartChange {
+//    static let order = OrderViewmodel()
+//
+//    func cartChange (item: Item, quantity: Int){
+//
+//
+//
+//    }
+//
+//    static var previews: some View {
+//        ItemRow(item: Product.example, cartChange: self as! CartChange)
+//    }
+//}
