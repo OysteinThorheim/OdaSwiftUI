@@ -22,24 +22,50 @@ struct AppView: View {
     //dette er begynnelsen på å forsøkje å gjøre at nav-bar kun er synelig når det er items in cart, haha
     
     var body: some View {
-        TabView{
+        
+        if(order.total > 1) {
+            TabView{
+                ContentView()
+                    .tabItem{
+                        Image(systemName: "list.dash")
+                        Text("Menu")
+                    }
+                OrderView()
+                    .tabItem{
+                        Image(systemName: "cart")
+                        Text(String(format: "%.2f kr", order.total))
+                    }
+            }
+        } else {
             ContentView()
-                .tabItem{
-                    if (order.total > 1){
-                    Image(systemName: "list.dash")
-                    Text("Menu")
-                    }
-                }
-            
-            OrderView()
-                .tabItem{
-                    if (order.total > 1){
-                    Image(systemName: "cart")
-                    Text(String(format: "%.2f kr", order.total))
-//                    Text("Total \(order.total, specifier: "%.2f")Kr")
-                    }
-                }
         }
+        
+//        if (order.total > 1){
+//        TabView{
+//            ContentView()
+//                .tabItem{
+//            //        if (order.total > 1){
+//                    Image(systemName: "list.dash")
+//                    Text("Menu")
+//            //        }
+//                }
+//
+//            OrderView()
+//                .tabItem{
+//                   // if (order.total > 1){
+//                    Image(systemName: "cart")
+//                    Text(String(format: "%.2f kr", order.total))
+////                    Text("Total \(order.total, specifier: "%.2f")Kr")
+//                    }
+//             //   }
+//        } else {
+//
+//            ContentView()
+//
+//        }
+            
+            
+//        }
     }
 }
 

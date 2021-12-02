@@ -21,7 +21,6 @@
 		D12C9F90274D529B0020B777 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12C9F8F274D529B0020B777 /* CheckoutView.swift */; };
 		D169EE0D27564E400077E635 /* CartChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D169EE0C27564E400077E635 /* CartChange.swift */; };
 		D16F075C2757E57600C629D1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16F075B2757E57600C629D1 /* Extensions.swift */; };
-		D1B771E6275007E8002D2459 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = D1B771E5275007E8002D2459 /* products.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,9 +37,9 @@
 		D12C9F8B274D4EAA0020B777 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		D12C9F8D274D50990020B777 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		D12C9F8F274D529B0020B777 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		D143DE82275926210065EDD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D169EE0C27564E400077E635 /* CartChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartChange.swift; sourceTree = "<group>"; };
 		D16F075B2757E57600C629D1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		D1B771E5275007E8002D2459 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,21 +72,16 @@
 		D12C9E8B274D0E270020B777 /* TemaOppgaveOdaSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				D143DE88275931850065EDD0 /* Dataservice */,
+				D143DE8527592F7A0065EDD0 /* Model */,
+				D143DE8627592F850065EDD0 /* View */,
+				D143DE8727592F910065EDD0 /* Viewmodel */,
+				D143DE82275926210065EDD0 /* Info.plist */,
 				D12C9E8C274D0E270020B777 /* TemaOppgaveOdaSwiftUIApp.swift */,
-				D12C9E8E274D0E270020B777 /* ContentView.swift */,
-				D12C9EA7274D34020020B777 /* ItemRow.swift */,
-				D12C9F89274D41120020B777 /* ItemDetail.swift */,
-				D12C9F8B274D4EAA0020B777 /* OrderView.swift */,
 				D12C9F8D274D50990020B777 /* AppView.swift */,
-				D12C9F8F274D529B0020B777 /* CheckoutView.swift */,
-				D12C9E9A274D0EB30020B777 /* Decoder.swift */,
-				D12C9E9C274D0ED90020B777 /* GroceryItems.swift */,
-				D12C9E9D274D0ED90020B777 /* OrderViewmodel.swift */,
-				D1B771E5275007E8002D2459 /* products.json */,
-				D169EE0C27564E400077E635 /* CartChange.swift */,
+				D16F075B2757E57600C629D1 /* Extensions.swift */,
 				D12C9E90274D0E270020B777 /* Assets.xcassets */,
 				D12C9E92274D0E270020B777 /* Preview Content */,
-				D16F075B2757E57600C629D1 /* Extensions.swift */,
 			);
 			path = TemaOppgaveOdaSwiftUI;
 			sourceTree = "<group>";
@@ -98,6 +92,43 @@
 				D12C9E93274D0E270020B777 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D143DE8527592F7A0065EDD0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D12C9E9C274D0ED90020B777 /* GroceryItems.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D143DE8627592F850065EDD0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D12C9E8E274D0E270020B777 /* ContentView.swift */,
+				D12C9F8B274D4EAA0020B777 /* OrderView.swift */,
+				D12C9F89274D41120020B777 /* ItemDetail.swift */,
+				D12C9EA7274D34020020B777 /* ItemRow.swift */,
+				D12C9F8F274D529B0020B777 /* CheckoutView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D143DE8727592F910065EDD0 /* Viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				D12C9E9D274D0ED90020B777 /* OrderViewmodel.swift */,
+				D169EE0C27564E400077E635 /* CartChange.swift */,
+			);
+			path = Viewmodel;
+			sourceTree = "<group>";
+		};
+		D143DE88275931850065EDD0 /* Dataservice */ = {
+			isa = PBXGroup;
+			children = (
+				D12C9E9A274D0EB30020B777 /* Decoder.swift */,
+			);
+			path = Dataservice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +193,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1B771E6275007E8002D2459 /* products.json in Resources */,
 				D12C9E94274D0E270020B777 /* Preview Assets.xcassets in Resources */,
 				D12C9E91274D0E270020B777 /* Assets.xcassets in Resources */,
 			);
@@ -314,15 +344,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TemaOppgaveOdaSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = L8974W63T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TemaOppgaveOdaSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -344,15 +376,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TemaOppgaveOdaSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = L8974W63T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TemaOppgaveOdaSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
