@@ -48,8 +48,31 @@ struct ContentView: View, CartChange {
         }.navigationTitle("Nettbutikk")
                 .listStyle(GroupedListStyle())
         }
+        .phoneStackNavigationView()
+        .iPadStackNavigationView()
     }
+    
  }
+
+extension View {
+    func phoneStackNavigationView() -> some View {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return AnyView(self.navigationViewStyle(.stack))
+        } else {
+            return AnyView(self)
+        }
+    }
+}
+
+extension View {
+    func iPadStackNavigationView() -> some View {
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            return AnyView(self.navigationViewStyle(.stack))
+        } else {
+            return AnyView(self)
+        }
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
