@@ -9,21 +9,13 @@ import SwiftUI
 
 struct AppView: View {
     
-    @EnvironmentObject var order: OrderViewmodel
-    
-//    var totalPrice: Double {
-//        let total = Double(order.total)
-//        return total
-//    }
-    
-    
-    
-   // @State private var itemsInCart = false
-    //dette er begynnelsen på å forsøkje å gjøre at nav-bar kun er synelig når det er items in cart, haha
+    @EnvironmentObject var order: OrderViewmodel    
     
     var body: some View {
         
-        if(order.total > 1) {
+        if(order.total < 1) {
+          ContentView()
+        } else {
             TabView{
                 ContentView()
                     .tabItem{
@@ -36,36 +28,7 @@ struct AppView: View {
                         Text(String(format: "%.2f kr", order.total))
                     }
             }
-        } else {
-            ContentView()
         }
-        
-//        if (order.total > 1){
-//        TabView{
-//            ContentView()
-//                .tabItem{
-//            //        if (order.total > 1){
-//                    Image(systemName: "list.dash")
-//                    Text("Menu")
-//            //        }
-//                }
-//
-//            OrderView()
-//                .tabItem{
-//                   // if (order.total > 1){
-//                    Image(systemName: "cart")
-//                    Text(String(format: "%.2f kr", order.total))
-////                    Text("Total \(order.total, specifier: "%.2f")Kr")
-//                    }
-//             //   }
-//        } else {
-//
-//            ContentView()
-//
-//        }
-            
-            
-//        }
     }
 }
 

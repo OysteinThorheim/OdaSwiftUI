@@ -18,29 +18,14 @@ class OrderViewmodel: ObservableObject {
         loadCart()
     }
     
-    
-
-//    var total: Double {
-//        if items.count > 0 {
-//            return items.reduce(0) { $0 + $1.gross_price }
-//        } else {
-//            return 0
-//        }
-//    }
-//
     func add(index:Int) {
-       // items.append(item)
 
-        //item.addQuantity(amount: quantity)
-        
-//        objectWillChange.send()
         self.items?[index].addQuantity(amount: 1)
         updateCart()
     }
 
     func remove(index: Int) {
         if(self.items![index].quantity > 1){
-//            objectWillChange.send()
             self.items?[index].addQuantity(amount: -1)
             updateCart()
         }
@@ -63,14 +48,12 @@ class OrderViewmodel: ObservableObject {
             }
             
         }
-//        objectWillChange.send()
+        
         self.cartSize = cartSize
         self.total = price
         print(total)
         
     }
-    
-    
     
     func loadCart(){
         
@@ -88,8 +71,6 @@ class OrderViewmodel: ObservableObject {
         
     }
     
-    
-    
     private func getItems(result: Result<GroceryItems?, Error>){
         switch result {
         case .success(let items):
@@ -101,6 +82,4 @@ class OrderViewmodel: ObservableObject {
             print(error)
         }
     }
-    
-    
 }

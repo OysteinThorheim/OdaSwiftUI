@@ -36,24 +36,14 @@ struct ContentView: View, CartChange {
         return nil
     }
     
-   // let menu = Bundle.main.decode([Items].self, from: "products.json")
-    
     var body: some View {
         NavigationView{
         List {
             
             ForEach(order.items ?? [], id: \.self.product.id) { section in
-                
-                    
-                
+
                 ItemRow(item: section, cartChange: self)
-//                  ForEach(section.items){ item in
-//                      ItemRow(item: item)
-                    
-//                }
                 
-            
-            
             }
         }.navigationTitle("Nettbutikk")
                 .listStyle(GroupedListStyle())

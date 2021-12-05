@@ -17,8 +17,6 @@ struct ItemRow: View {
         HStack{
     
             NavigationLink(destination: ItemDetail(item: item.product)){
-        
-        //Få bilde og få det til å legge seg til høyre for item name og price
             
         HStack{
             Image(uiImage: item.product.images[0].thumbnail.url.getImageFromUrl())
@@ -27,9 +25,6 @@ struct ItemRow: View {
                     .frame(width: 32.0, height: 32.0)
                 .clipShape(Circle())
                 .overlay(Circle().stroke(Color.gray, lineWidth: 2))
-            
-            
-        //Få bilde og få det til å legge seg til høyre for item name og price
             
             VStack(alignment: .leading) {
                 Text(item.product.name)
@@ -46,7 +41,6 @@ struct ItemRow: View {
                 if (item.quantity > 1){
                 
             Button(action: {
-//                self.order.remove(item: self.item)
                 cartChange.cartChange(item: item, quantity: -1)
             }) {
                 Image("minus-circle-fill")
@@ -56,7 +50,6 @@ struct ItemRow: View {
                 }
             
             Button(action: {
-//                self.order.add(item: self.item)
                 cartChange.cartChange(item: item, quantity: +1)
             }) {
                 Image("plus-circle-fill")

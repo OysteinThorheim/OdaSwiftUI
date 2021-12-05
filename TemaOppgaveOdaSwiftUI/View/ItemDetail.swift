@@ -14,8 +14,6 @@ struct ItemDetail: View {
     var body: some View {
         VStack{
             
-            
-            //ZStacken er for å legge tekst oppå bilde, trengs nok ikke
             ZStack(alignment:
                         .bottomTrailing){
                 Image(uiImage: item.images[0].thumbnail.url.getImageFromUrl())
@@ -28,19 +26,13 @@ struct ItemDetail: View {
                     .foregroundColor(.white)
                     .offset(x: -5, y: -5)
             }
-            //ZStacken er for å legge tekst oppå bilde, trengs nok ikke
-            //Text(item.name)
+            
             Text(item.full_name)
                 .font(.headline)
             Text("Pris: \(item.gross_price) kr")
                 .font(.headline)
                 .padding()
             
-            
-            
-//            Button ("Legg i handlevognen"){
-//               // self.order.add(item: self.item)
-//            }.font(.headline)
         }.navigationBarTitle(Text(item.name), displayMode: .inline) //Mindre tittel at top
     }
 }
