@@ -56,7 +56,7 @@ struct ItemRow: View {
                     .foregroundColor(Color("oda-orange"))
             }
             }.font(.headline).buttonStyle(BorderlessButtonStyle())
-            
+
         }
         .buttonStyle(BorderlessButtonStyle())
         

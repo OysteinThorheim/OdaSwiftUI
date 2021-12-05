@@ -33,7 +33,6 @@ struct OrderView: View {
                                         .font(.headline)
                                     Text("\(item.product.gross_price) kr")
                                 }.layoutPriority(1) //Denne gjør at ingen items i lista kuttes eks: "Gresskar" blir "Gresska...", dersom det ikke skjer trengs den ikke
-                                //Her legger vi kun på allergener i listeraden, ikke relevant
                                 
                                 Spacer()
                                 
