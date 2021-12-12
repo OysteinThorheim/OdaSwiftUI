@@ -11,7 +11,7 @@
 		D12C9E8F274D0E270020B777 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12C9E8E274D0E270020B777 /* ContentView.swift */; };
 		D12C9E91274D0E270020B777 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D12C9E90274D0E270020B777 /* Assets.xcassets */; };
 		D12C9E94274D0E270020B777 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D12C9E93274D0E270020B777 /* Preview Assets.xcassets */; };
-		D12C9E9B274D0EB30020B777 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12C9E9A274D0EB30020B777 /* Decoder.swift */; };
+		D12C9E9B274D0EB30020B777 /* Dataservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12C9E9A274D0EB30020B777 /* Dataservice.swift */; };
 		D12C9E9E274D0ED90020B777 /* GroceryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12C9E9C274D0ED90020B777 /* GroceryItems.swift */; };
 		D12C9E9F274D0ED90020B777 /* OrderViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12C9E9D274D0ED90020B777 /* OrderViewmodel.swift */; };
 		D12C9EA8274D34020020B777 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12C9EA7274D34020020B777 /* ItemRow.swift */; };
@@ -29,7 +29,7 @@
 		D12C9E8E274D0E270020B777 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D12C9E90274D0E270020B777 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D12C9E93274D0E270020B777 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D12C9E9A274D0EB30020B777 /* Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		D12C9E9A274D0EB30020B777 /* Dataservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dataservice.swift; sourceTree = "<group>"; };
 		D12C9E9C274D0ED90020B777 /* GroceryItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItems.swift; sourceTree = "<group>"; };
 		D12C9E9D274D0ED90020B777 /* OrderViewmodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewmodel.swift; sourceTree = "<group>"; };
 		D12C9EA7274D34020020B777 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 		D143DE88275931850065EDD0 /* Dataservice */ = {
 			isa = PBXGroup;
 			children = (
-				D12C9E9A274D0EB30020B777 /* Decoder.swift */,
+				D12C9E9A274D0EB30020B777 /* Dataservice.swift */,
 			);
 			path = Dataservice;
 			sourceTree = "<group>";
@@ -216,7 +216,7 @@
 				D12C9EA8274D34020020B777 /* ItemRow.swift in Sources */,
 				D12C9E9E274D0ED90020B777 /* GroceryItems.swift in Sources */,
 				D169EE0D27564E400077E635 /* CartChange.swift in Sources */,
-				D12C9E9B274D0EB30020B777 /* Decoder.swift in Sources */,
+				D12C9E9B274D0EB30020B777 /* Dataservice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
