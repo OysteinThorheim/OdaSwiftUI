@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct OrderView: View {
     
@@ -19,7 +20,7 @@ struct OrderView: View {
                         if(item.quantity > 1){
                             
                             HStack{
-                                Image(uiImage: item.product.images[0].thumbnail.url.getImageFromUrl())
+                                WebImage(url:URL(string: item.product.images[0].thumbnail.url))
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 32.0, height: 32.0)
