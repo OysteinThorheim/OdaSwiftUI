@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
+
 
 class OrderViewmodel: ObservableObject {
-   // @Published var items = [Product]()
+    // @Published var items = [Product]()
     @Published var items:[Item]?
     @Published var total: Double = 0
     @Published var cartSize: Int = 0
@@ -19,11 +21,11 @@ class OrderViewmodel: ObservableObject {
     }
     
     func add(index:Int) {
-
+        
         self.items?[index].addQuantity(amount: 1)
         updateCart()
     }
-
+    
     func remove(index: Int) {
         if(self.items![index].quantity > 1){
             self.items?[index].addQuantity(amount: -1)
@@ -65,7 +67,7 @@ class OrderViewmodel: ObservableObject {
             }
             
         } else{
-            print ("fucking failure my dudes")
+            print ("failure to load cart")
             
         }
         

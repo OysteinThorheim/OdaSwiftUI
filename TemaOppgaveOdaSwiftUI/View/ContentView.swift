@@ -24,7 +24,7 @@ struct ContentView: View, CartChange {
     }
     
     func getIndex(item: Item) -> Int?{
-    
+        
         if order.items != nil{
             
             for i in 0 ..< Int(order.items!.count){
@@ -38,21 +38,21 @@ struct ContentView: View, CartChange {
     
     var body: some View {
         NavigationView{
-        List {
-            
-            ForEach(order.items ?? [], id: \.self.product.id) { section in
-
-                ItemRow(item: section, cartChange: self)
+            List {
                 
-            }
-        }.navigationTitle("Nettbutikk")
+                ForEach(order.items ?? [], id: \.self.product.id) { section in
+                    
+                    ItemRow(item: section, cartChange: self)
+                    
+                }
+            }.navigationTitle("Nettbutikk")
                 .listStyle(GroupedListStyle())
         }
         .phoneStackNavigationView()
         .iPadStackNavigationView()
     }
     
- }
+}
 
 extension View {
     func phoneStackNavigationView() -> some View {
@@ -78,5 +78,5 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
- }
+}
 

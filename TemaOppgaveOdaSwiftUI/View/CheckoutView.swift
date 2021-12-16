@@ -16,7 +16,7 @@ struct CheckoutView: View {
     @State private var cuponcode = ""
     @State private var showingPaymentAlert = false
     
-    //Rabattkode? Få 10% rabatt på din bestilling med rabattkoden "Konstan10n" 
+    //Rabattkode? Få 10% rabatt på din bestilling med rabattkoden "Konstan10n"
     var totalPrice: Double {
         let total = cuponcode == "Konstan10n" ? order.total / 100 * 90  : Double(order.total)
         return total
@@ -36,7 +36,7 @@ struct CheckoutView: View {
                     Text("Bruk rabattkode")
                 }
                 if addcuponDetails{
-                TextField("Tast inn rabattkode", text: $cuponcode)
+                    TextField("Tast inn rabattkode", text: $cuponcode)
                 }
             }
             

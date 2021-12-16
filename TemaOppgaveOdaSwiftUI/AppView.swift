@@ -14,7 +14,7 @@ struct AppView: View {
     var body: some View {
         
         if(order.total < 1) {
-          ContentView()
+            ContentView()
         } else {
             TabView{
                 ContentView()

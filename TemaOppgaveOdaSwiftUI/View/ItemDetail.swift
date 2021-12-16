@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ItemDetail: View {
     @EnvironmentObject var order: OrderViewmodel
@@ -16,7 +17,7 @@ struct ItemDetail: View {
             
             ZStack(alignment:
                         .bottomTrailing){
-                Image(uiImage: item.images[0].thumbnail.url.getImageFromUrl())
+                WebImage(url:URL(string: item.images[0].thumbnail.url))
                     .resizable()
                     .scaledToFit()
                 Text(item.name)

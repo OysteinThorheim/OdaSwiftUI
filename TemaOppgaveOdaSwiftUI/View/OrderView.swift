@@ -22,11 +22,11 @@ struct OrderView: View {
                                 Image(uiImage: item.product.images[0].thumbnail.url.getImageFromUrl())
                                     .resizable()
                                     .scaledToFit()
-                                        .frame(width: 32.0, height: 32.0)
+                                    .frame(width: 32.0, height: 32.0)
                                     .clipShape(Circle())
-                                    .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+                                    .overlay(Circle().stroke(Color.odaOrange, lineWidth: 2))
                                 
-                            //Få bilde og få det til å legge seg til høyre for item name og price
+                                //Få bilde og få det til å legge seg til høyre for item name og price
                                 
                                 VStack(alignment: .leading) {
                                     Text(item.product.name)
@@ -39,7 +39,7 @@ struct OrderView: View {
                                 Text("\(item.quantity-1) Stk").font(.headline)
                                 
                             }
-
+                            
                         }
                     }/*.onDelete(perform: deleteItems)*/
                 }
@@ -60,19 +60,19 @@ struct OrderView: View {
     
     
     
-
-//    func deleteItems(at offsets: IndexSet){
-//        order.items.remove(atOffsets: offsets)
-//    }
-//}
-
-struct OrderView_Previews: PreviewProvider {
-    static let order = OrderViewmodel()
     
-    static var previews: some View {
-        OrderView().environmentObject(order)
+    //    func deleteItems(at offsets: IndexSet){
+    //        order.items.remove(atOffsets: offsets)
+    //    }
+    //}
+    
+    struct OrderView_Previews: PreviewProvider {
+        static let order = OrderViewmodel()
+        
+        static var previews: some View {
+            OrderView().environmentObject(order)
+        }
     }
-}
 }
 
 

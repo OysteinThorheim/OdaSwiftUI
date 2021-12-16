@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15F036FA276B92C400BEAC59 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 15F036F9276B92C400BEAC59 /* SDWebImageSwiftUI */; };
 		D12C9E8D274D0E270020B777 /* TemaOppgaveOdaSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12C9E8C274D0E270020B777 /* TemaOppgaveOdaSwiftUIApp.swift */; };
 		D12C9E8F274D0E270020B777 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12C9E8E274D0E270020B777 /* ContentView.swift */; };
 		D12C9E91274D0E270020B777 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D12C9E90274D0E270020B777 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15F036FA276B92C400BEAC59 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +150,7 @@
 			);
 			name = TemaOppgaveOdaSwiftUI;
 			packageProductDependencies = (
+				15F036F9276B92C400BEAC59 /* SDWebImageSwiftUI */,
 			);
 			productName = TemaOppgaveOdaSwiftUI;
 			productReference = D12C9E89274D0E270020B777 /* TemaOppgaveOdaSwiftUI.app */;
@@ -178,6 +181,7 @@
 			);
 			mainGroup = D12C9E80274D0E270020B777;
 			packageReferences = (
+				15F036F8276B92C400BEAC59 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = D12C9E8A274D0E270020B777 /* Products */;
 			projectDirPath = "";
@@ -427,6 +431,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		15F036F8276B92C400BEAC59 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		15F036F9276B92C400BEAC59 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15F036F8276B92C400BEAC59 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D12C9E81274D0E270020B777 /* Project object */;
 }
