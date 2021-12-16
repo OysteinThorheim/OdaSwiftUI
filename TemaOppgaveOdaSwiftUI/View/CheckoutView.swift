@@ -53,7 +53,7 @@ struct CheckoutView: View {
         }
         .navigationBarTitle(Text("Betaling"), displayMode: .inline)
         .alert(isPresented: $showingPaymentAlert) {
-            Alert (title: Text("Takk for bestillingen"), message:  Text("Totalen på din bestilling: $\(totalPrice, specifier: "%.2f") "), dismissButton: .default(Text("OK")))
+            Alert (title: Text("Takk for bestillingen"), message:  Text("Totalen på din bestilling:\(totalPrice, specifier: "%.2f")Kr"), dismissButton: .default(Text("OK")))
         }
     }
 }
