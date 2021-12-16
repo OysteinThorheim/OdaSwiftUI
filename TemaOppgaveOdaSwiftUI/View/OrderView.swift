@@ -27,13 +27,11 @@ struct OrderView: View {
                                     .clipShape(Circle())
                                     .overlay(Circle().stroke(Color.odaOrange, lineWidth: 2))
                                 
-                                //Få bilde og få det til å legge seg til høyre for item name og price
-                                
                                 VStack(alignment: .leading) {
                                     Text(item.product.name)
                                         .font(.headline)
                                     Text("\(item.product.gross_price) kr")
-                                }.layoutPriority(1) //Denne gjør at ingen items i lista kuttes eks: "Gresskar" blir "Gresska...", dersom det ikke skjer trengs den ikke
+                                }.layoutPriority(1)
                                 
                                 Spacer()
                                 
@@ -42,30 +40,21 @@ struct OrderView: View {
                             }
                             
                         }
-                    }/*.onDelete(perform: deleteItems)*/
+                    }
                 }
                 
                 Section{
                     NavigationLink(destination: CheckoutView()){
                         Text("Send bestilling")
                     }
-                }//.disabled(item.quantity=0)
+                }
             }
             .navigationBarTitle("Bestilling")
             .listStyle(GroupedListStyle())
-            //.navigationBarItems(trailing: EditButton())
         }
         .phoneStackNavigationView()
         .iPadStackNavigationView()
     }
-    
-    
-    
-    
-    //    func deleteItems(at offsets: IndexSet){
-    //        order.items.remove(atOffsets: offsets)
-    //    }
-    //}
     
     struct OrderView_Previews: PreviewProvider {
         static let order = OrderViewmodel()

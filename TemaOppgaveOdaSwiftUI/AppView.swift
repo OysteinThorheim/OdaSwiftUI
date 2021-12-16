@@ -31,11 +31,3 @@ struct AppView: View {
         }
     }
 }
-
-//struct AppView_Previews: PreviewProvider {
-//    static let order = OrderViewmodel()
-//    
-//    static var previews: some View {
-//        AppView().environmentObject(order)
-//    }
-//}

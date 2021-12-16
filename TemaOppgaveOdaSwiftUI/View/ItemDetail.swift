@@ -34,17 +34,6 @@ struct ItemDetail: View {
                 .font(.headline)
                 .padding()
             
-        }.navigationBarTitle(Text(item.name), displayMode: .inline) //Mindre tittel at top
+        }.navigationBarTitle(Text(item.name), displayMode: .inline)
     }
 }
-
-//struct ItemDetail_Previews: PreviewProvider {
-//    
-//    static let order = OrderViewmodel()
-//    
-//    static var previews: some View {
-//        NavigationView{
-//            ItemDetail(item: Product.example).environmentObject(order)
-//        }
-//    }
-//}

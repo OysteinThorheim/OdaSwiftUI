@@ -55,11 +55,5 @@ struct Product: Codable {
         case gross_price
         case gross_unit_price
         
-    }
-    
-    
-    //#if DEBUG
-    //    static let example = Item(product: Product (id: Int(), full_name: "Gresskar Butternut Portugal/ Spania, 750 g",name:"Gresskar Butternut", name_extra: "Portugal/ Spania, 750 g",images:JsonImage(thumbnail: Large(url: "https://bilder.kolonial.no/produkter/d0083d5f-1101-4e7c-82e8-9f4210fdbd65.jpg?fit=max&w=500&s=f995d906632c729f4e00906118d5f900")),gross_price: "33.00",gross_unit_price: "44.00"),quantity: 1)
-    //#endif
-    
+    }    
 }

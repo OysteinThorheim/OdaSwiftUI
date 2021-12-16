@@ -31,8 +31,7 @@ struct ItemRow: View {
                         Text(item.product.name)
                             .font(.headline)
                         Text("\(item.product.gross_price) kr")
-                    }.layoutPriority(1) //Denne gjør at ingen items i lista kuttes eks: "Gresskar" blir "Gresska...", dersom det ikke skjer trengs den ikke
-                    //Her legger vi kun på allergener i listeraden, ikke relevant
+                    }.layoutPriority(1)
                     Spacer()
                     
                 }
@@ -60,21 +59,6 @@ struct ItemRow: View {
             
         }
         .buttonStyle(BorderlessButtonStyle())
-        
-    } //Hele Hstacken og VStacken plasseres i navigation link for å navigere til "Details"
+    }
     
 }
-
-//struct ItemRow_Previews: PreviewProvider, CartChange {
-//    static let order = OrderViewmodel()
-//
-//    func cartChange (item: Item, quantity: Int){
-//
-//
-//
-//    }
-//
-//    static var previews: some View {
-//        ItemRow(item: Product.example, cartChange: self as! CartChange)
-//    }
-//}

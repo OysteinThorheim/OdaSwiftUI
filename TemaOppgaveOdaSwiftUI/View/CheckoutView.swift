@@ -16,7 +16,6 @@ struct CheckoutView: View {
     @State private var cuponcode = ""
     @State private var showingPaymentAlert = false
     
-    //Rabattkode? Få 10% rabatt på din bestilling med rabattkoden "Konstan10n"
     var totalPrice: Double {
         let total = cuponcode == "Extra10" ? order.total / 100 * 90  : Double(order.total)
         return total
