@@ -18,7 +18,7 @@ struct CheckoutView: View {
     
     //Rabattkode? Få 10% rabatt på din bestilling med rabattkoden "Konstan10n"
     var totalPrice: Double {
-        let total = cuponcode == "Konstan10n" ? order.total / 100 * 90  : Double(order.total)
+        let total = cuponcode == "Extra10" ? order.total / 100 * 90  : Double(order.total)
         return total
     }
     
