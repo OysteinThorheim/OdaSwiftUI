@@ -60,7 +60,7 @@ class OrderViewmodel: ObservableObject {
     func loadCart(){
         
         if let urlString = URL(string:
-                                "https://api.jsonbin.io/b/608071a7a2213a0c1428343f/1"){
+                                "https://api.npoint.io/d4e0a014b1cfc5254bcb"){
             dataservice.fetchItems(urlString: urlString){
                 [weak self] result in
                 self?.getItems(result: result)
